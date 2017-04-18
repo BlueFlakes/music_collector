@@ -2,8 +2,6 @@
 import csv
 import random
 
-music = [(("Pink Floyd", "The Dark Side Of The Moon"), (1973, "psychodelic rock", "43:00")),
-         (("Britney Spears", "Baby One More Time"), (1999, "pop", "42:20"))]
 
 red = "\033[1;31m"
 off = "\033[0;0m"
