@@ -3,6 +3,7 @@ import csv
 import random
 
 
+
 red = "\033[1;31m"
 off = "\033[0;0m"
 darkyellow = "\033[0;33m"
@@ -218,7 +219,7 @@ while finish != "koniec":
         storage = []
         k = 0
         for i in range(len(albums)):
-            if find_album_by_artist.title() in albums[i][0][0]:
+            if find_album_by_artist.title() == albums[i][0][0]:
                 storage.append(albums[i][0][1])
                 k += 1
         if k > 0:
@@ -237,7 +238,7 @@ while finish != "koniec":
         storage = []
         k = 0
         for i in range(len(albums)):
-            if find_album_by_year in albums[i][1][0]:
+            if find_album_by_year == albums[i][1][0]:
                 storage.append(albums[i][0][1])
                 k += 1
         if k > 0:
@@ -254,7 +255,7 @@ while finish != "koniec":
         find_musician_by_album = check_if_word('find_musician')
 
         for i in range(len(albums)):
-            if find_musician_by_album.lower() in albums[i][0][1].lower():
+            if find_musician_by_album.lower() == albums[i][0][1].lower():
                 print(blue + "The author of " + find_musician_by_album.title() + " is " + albums[i][0][0] + off)
 
 ####----------------------------------------------------------------------------------------------------------------####
@@ -283,7 +284,7 @@ while finish != "koniec":
         storage = []
         k = 0
         for i in range(len(albums)):
-            if find_album_by_genre.lower() in albums[i][1][1].lower():
+            if find_album_by_genre.lower() == albums[i][1][1].lower():
                 storage.append(albums[i][0][1])
                 k += 1
         if k > 0:
@@ -310,7 +311,7 @@ while finish != "koniec":
         storage = []
         k = 0
         for i in range(len(albums)):
-            if random_album_by_genre.lower() in albums[i][1][1].lower():
+            if random_album_by_genre.lower() == albums[i][1][1].lower():
                 storage.append(albums[i][0][1])
                 k += 1
         if k > 0:
@@ -325,7 +326,7 @@ while finish != "koniec":
         storage = []
         k = 0
         for i in range(len(albums)):
-            if find_album_by_artist.title() in albums[i][0][0]:
+            if find_album_by_artist.title() == albums[i][0][0]:
                 storage.append(albums[i][0][1])
                 k += 1
         if k > 0:
