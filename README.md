@@ -261,8 +261,16 @@ while finish:
     elif num_input == 4:
         genre_storage = []
         for i in range(len(list_of_albums)):
-            genre_storage.append(list_of_albums[i][1][1])
-        print("Random album by genre: ", random.choice(genre_storage))
+            if list_of_albums[i][1][1] not in genre_storage:
+                genre_storage.append(list_of_albums[i][1][1])
+
+        possible_albums = []
+        choosen_genre = random.choice(genre_storage)
+        for i in range(len(list_of_albums)):
+            if choosen_genre == list_of_albums[i][1][1]:
+                possible_albums.append(list_of_albums[i][0][1])
+
+        print("Random album by genre:", random.choice(possible_albums))
 ####----------------------------------------------------------------------------------------------------------------####
     elif num_input == 5:
 
