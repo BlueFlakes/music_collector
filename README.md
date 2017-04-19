@@ -294,13 +294,24 @@ while finish:
                 print(" album.")
 ####----------------------------------------------------------------------------------------------------------------####
     elif num_input == 6:
-        time_album_storage = []
+        len_recording_and_album_storage = []
+        length_of_recordings = []
+        finding_winner = {}  #  Dictionary because can find winner by key without sorting list by list
 
         for x in range(len(list_of_albums)):
-            time_album_storage.append([list_of_albums[x][1][2],list_of_albums[x][0][1]])
+            len_recording_and_album_storage.append([list_of_albums[x][1][2],list_of_albums[x][0][1]])
 
-        time_album_storage.sort(reverse=True)
-        print("Longest length of recording:",time_album_storage[0][0],"Album:",time_album_storage[0][1])
+        for i in range(len(len_recording_and_album_storage)):
+            len_recording_and_album_storage[i][0] = len_recording_and_album_storage[i][0].replace(":", "")
+
+        for item in len_recording_and_album_storage:
+            finding_winner[int(item[0])] = item[1]
+
+        for item in len_recording_and_album_storage:
+            length_of_recordings.append(int(item[0]))
+
+        length_of_recordings.sort(reverse=True)
+        print("The longest time of recording the album:", finding_winner[length_of_recordings[0]])
 
     elif num_input == 0:
 
